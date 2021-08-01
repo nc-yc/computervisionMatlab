@@ -1,0 +1,12 @@
+%实现阈值灰度分割
+ImageInRGB=imread('G:\大三下\数字图像处理与机器视觉\code_matlab\2\apple2.png');
+ImageIn=rgb2gray(ImageInRGB);
+high=200;
+low=10;
+Threshold=(low<ImageIn)&(ImageIn<high);
+subplot(1,2,1);
+imshow(ImageIn);
+title('原图像');
+subplot(1,2,2);
+imshow(Threshold);
+title('阈值分割');

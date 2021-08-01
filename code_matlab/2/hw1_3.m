@@ -1,0 +1,14 @@
+%实现平方法，方根法
+ImageInRGB=imread('G:\大三下\数字图像处理与机器视觉\code_matlab\2\apple2.png');
+ImageIn=rgb2gray(ImageInRGB);
+ImageSquare=uint8((double(ImageIn).^2)/255);
+ImageSqrt=uint8((double(ImageIn).^0.5)/16*255);
+subplot(1,3,1);
+imshow(ImageIn);
+title('原图像');
+subplot(1,3,2);
+imshow(ImageSquare);
+title('平方法');
+subplot(1,3,3);
+imshow(ImageSqrt);
+title('方根法');
