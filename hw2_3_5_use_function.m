@@ -1,7 +1,7 @@
 I=imread('banana.png');
 bw=im2bw(I);
 [r,c]=find(bw==1);
-% 'a'是按面积算的最小矩形，如果按边长用'p'
+% 'a'鏄寜闈㈢Н绠楃殑鏈�灏忕煩褰紝濡傛灉鎸夎竟闀跨敤'p'
 [rectx,recty,area,perimeter] = minboundrect(c,r,'a'); 
 imshow(bw);hold on
 line(rectx,recty);
